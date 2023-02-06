@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter - L'actualist</title>
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+    <section>
+        <span class="overlay"></span>
+
+        <div class="modal-box">
+            <i class="fa-regular fa-circle-check"></i>
+            <h2>Great !</h2>
+            <h3>You have been successfully subscribed to the Newsletter.</h3>
+
+            <div class="buttons">
+                <button class="close-btn" onclick="back()">Back to home</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const section = document.querySelector("section");
+
+        section.classList.add("active");
+
+        function back() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

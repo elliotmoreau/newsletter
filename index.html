@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Newsletter - Website name</title>
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+</head>
+
+<body>
+<section>
+    <span class="overlay"></span>
+    <form method="GET" action="complete.html">
+        <div class="modal-box" id="transition">
+            <div id="logo" class="icon">
+                <i class="fa-regular" id="fa"></i>
+            </div>
+            <h2 class="text" id="text">Email address :</h2>
+            <input name="email" type="email" class="email_input">
+
+            <div class="conditions">
+                <label class="checkbox_container">
+                    <input name="conditions" type="checkbox" class="email_checkbox">
+                    <span class="email_checkspan"></span>
+                </label>
+                <h3 style="margin-left: 30px;">I accept <a class="email_link" href="./">the general terms of use</a>
+                </h3>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="close_btn btn_none" id="btn">Subscribe to the newsletter</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<script>
+    const section = document.querySelector("section");
+
+    section.classList.add("active");
+
+    function send() {
+        window.location.href = "complete.html";
+    }
+
+    var radius = document.getElementById("transition");
+    var button = document.getElementById("btn");
+    var icon = document.getElementById("logo");
+    var fa = document.getElementById("fa");
+    var text = document.getElementById("text");
+
+    setTimeout(function () {
+        radius.classList.toggle("first_radius");
+        fa.classList.toggle("fa-newspaper");
+    }, 250);
+
+    setTimeout(function () {
+        radius.classList.toggle("second_radius");
+        icon.classList.toggle("icon");
+        icon.classList.toggle("opacity");
+        button.classList.toggle("btn_display");
+        text.classList.toggle("opacity");
+    }, 1350);
+</script>
+</body>
+
+</html>
